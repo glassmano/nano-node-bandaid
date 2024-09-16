@@ -1078,9 +1078,13 @@ mv bandaid_build/nano/secure/utility.cpp.awk bandaid_build/nano/secure/utility.c
 awk  'NR==44 { sub("NanoTest", "BananoTest") }; { print $0 }' bandaid_build/nano/secure/utility.cpp > bandaid_build/nano/secure/utility.cpp.awk
 mv bandaid_build/nano/secure/utility.cpp.awk bandaid_build/nano/secure/utility.cpp;
 
-#nano/slow_test/node.cpp
-# awk  'NR==613 { sub("MBAN_ratio", "Gxrb_ratio") }; { print $0 }' bandaid_build/nano/slow_test/node.cpp > bandaid_build/nano/slow_test/node.cpp.awk
-# mv bandaid_build/nano/slow_test/node.cpp.awk bandaid_build/nano/slow_test/node.cpp;
+#nano/slow_test/bootstrap.cpp
+awk  'NR==67 { sub("nano_beta_network", "banano_beta_network") }; { print $0 }' bandaid_build/nano/slow_test/bootstrap.cpp > bandaid_build/nano/slow_test/bootstrap.cpp.awk
+mv bandaid_build/nano/slow_test/bootstrap.cpp.awk bandaid_build/nano/slow_test/bootstrap.cpp;
+
+#nano/slow_test/flamegraph.cpp
+awk  'NR==46 || NR==86 { sub("xrb_ratio", "raw_ratio") }; { print $0 }' bandaid_build/nano/slow_test/flamegraph.cpp > bandaid_build/nano/slow_test/flamegraph.cpp.awk
+mv bandaid_build/nano/slow_test/flamegraph.cpp.awk bandaid_build/nano/slow_test/flamegraph.cpp;
 
 #nanocurrency-beta.spec.in
 awk  'NR==1 || NR==13 || NR==45 || NR==60 || NR==61 || NR==62 || NR==66 { sub("nanocurrency", "bananocoin") }; { print $0 }' bandaid_build/nanocurrency-beta.spec.in > bandaid_build/nanocurrency-beta.spec.in.awk

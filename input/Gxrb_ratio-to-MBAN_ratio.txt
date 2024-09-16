@@ -25,3 +25,4 @@ nano/core_test/active_elections.cpp
 nano/core_test/confirming_set.cpp
 nano/core_test/ledger_confirm.cpp
 nano/core_test/scheduler_buckets.cpp
+nano/slow_test/flamegraph.cpp

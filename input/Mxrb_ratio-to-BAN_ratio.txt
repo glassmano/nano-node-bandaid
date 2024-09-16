@@ -13,3 +13,4 @@ nano/rpc_test/rpc.cpp
 nano/lib/numbers.hpp
 nano/core_test/election_scheduler.cpp
 nano/core_test/scheduler_buckets.cpp
+nano/node/monitor.cpp
